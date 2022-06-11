@@ -12,12 +12,10 @@ class Main {
         }
 
         switch (args[0]) {
-            case "schedules" ->
-                    new Schedules();
-            case "top" ->
-                    new Top();
-            default ->
-                    System.out.println("Really bruh??");
+            case "schedules" -> new Schedules();
+            case "top" -> new Top();
+            case "random" -> new Random();
+            default -> System.out.println("Really bruh??");
         }
     }
 }

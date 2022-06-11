@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.net.http.HttpResponse;
 import java.util.Scanner;
 
-public class Top extends APIProcessing {
+class Top extends APIProcessing {
     private static final Scanner scanner = new Scanner(System.in);
 
     public Top() throws IOException, ParseException, InterruptedException {
@@ -117,7 +117,6 @@ public class Top extends APIProcessing {
         }
 
         String url = APIURL + "top/" + media + "?" + scanType + "&" + scanFilter;
-
         HttpResponse response = apiRequest(url);
 
         if (response.statusCode() == 200) {

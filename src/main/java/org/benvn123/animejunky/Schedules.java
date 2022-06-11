@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 class Schedules extends APIProcessing {
     public Schedules() throws IOException, InterruptedException, ParseException {
-        Scanner scanner = new Scanner(System.in);
+        final Scanner scanner = new Scanner(System.in);
 
         final String[] DAYS = {
                 "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday", "any"
@@ -66,7 +66,6 @@ class Schedules extends APIProcessing {
         scanner.close();
 
         String url = APIURL + "schedules" + scanDay + "?kids=" + kids + "&sfw=" + sfw;
-
         HttpResponse response = apiRequest(url);
 
         if (response.statusCode() == 200) {
