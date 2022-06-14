@@ -135,6 +135,7 @@ class Top extends APIProcessing {
             JSONArray data = (JSONArray) jsonObject.get("data");
             for (Object datum : data) {
                 JSONObject item = (JSONObject) datum;
+
                 System.out.println("\nTitle: " + item.get("title").toString() + " (" + item.get("type") + ")");
 
                 if (media.equals("anime")) {
@@ -175,6 +176,7 @@ class Top extends APIProcessing {
             JSONArray data = (JSONArray) jsonObject.get("data");
             for (Object datum : data) {
                 JSONObject item = (JSONObject) datum;
+
                 System.out.println("\nName: " + item.get("name").toString());
                 System.out.println("Favorites: " + item.get("favorites").toString());
                 System.out.println("Link: " + item.get("url").toString());

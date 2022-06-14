@@ -84,6 +84,7 @@ class Schedules extends APIProcessing {
             JSONArray data = (JSONArray) jsonObject.get("data");
             for (Object datum : data) {
                 JSONObject item = (JSONObject) datum;
+
                 System.out.println("\nTitle: " + item.get("title").toString() + " (" + item.get("type") + ")");
                 System.out.println("Rating: " + item.get("rating").toString());
                 System.out.println("Status: " + item.get("status").toString());

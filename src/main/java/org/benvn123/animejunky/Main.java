@@ -15,6 +15,7 @@ class Main {
             case "schedules" -> new Schedules();
             case "top" -> new Top();
             case "random" -> new Random();
+            case "characters" -> new Characters();
             default -> System.out.println("Really bruh??");
         }
     }
